@@ -7,8 +7,11 @@ const playGame = document.querySelector("header button.btn");
 console.log(playGame);
 
 
-// Creo un ciclo FOR per il numero di quadrati da generare
-for (let i=0; i<100; i++){
+playGame.addEventListener("click", function(){
+    document.getElementById("grid-container").innerHTML = "";
+
+    // Creo un ciclo FOR per il numero di quadrati da generare
+    for (let i=0; i<100; i++){
     const newSquare = createNewSquare();
 
     newSquare.innerHTML = i + 1;
@@ -18,7 +21,9 @@ for (let i=0; i<100; i++){
     });
 
     gridContainer.append(newSquare)
-}
+    }
+})
+
 
 // Creo una funzione per la creazione di un nuovo quadrato
 function createNewSquare (){
