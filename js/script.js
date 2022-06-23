@@ -2,6 +2,11 @@
 const gridContainer = document.getElementById('grid-container');
 console.log(gridContainer);
 
+// Dichiaro la variabile per il pulsante di Play
+const playGame = document.querySelector("header button.btn");
+console.log(playGame);
+
+
 // Creo un ciclo FOR per il numero di quadrati da generare
 for (let i=0; i<100; i++){
     const newSquare = createNewSquare();
