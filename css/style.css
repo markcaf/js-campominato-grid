@@ -22,7 +22,7 @@ div.square{
     color: white;
 }
 
-div.square-medium{
+#grid-container.medium .square{
     float: left;
     width: calc(100% / 9);
     height: calc(100% / 9);
@@ -36,13 +36,11 @@ div.square-medium{
     color: white;
 }
 
-div.square,
-div.square-medium{
+div.square{
     border: 1px white solid;
 }
 
-div.square.clicked,
-div.square-medium.clicked{
+div.square.clicked{
     background-color:cornflowerblue;
     color: #011627;
 }
