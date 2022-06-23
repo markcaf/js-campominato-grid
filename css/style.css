@@ -22,11 +22,27 @@ div.square{
     color: white;
 }
 
-div.square{
+div.square-medium{
+    float: left;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+}
+
+div.square,
+div.square-medium{
     border: 1px white solid;
 }
 
-div.square.clicked{
+div.square.clicked,
+div.square-medium.clicked{
     background-color:cornflowerblue;
     color: #011627;
 }
@@ -39,4 +55,8 @@ div.square.clicked{
 
 header .ms_logo{
     width: 10%;
+}
+
+header .form-select{
+    width: 30%;
 }
