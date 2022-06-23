@@ -6,6 +6,9 @@ console.log(gridContainer);
 const playGame = document.querySelector("header button.btn");
 console.log(playGame);
 
+// Dichiario la variabile del select per il cambio il livello di difficoltà
+const selectLevel = document.querySelector('.form-select');
+
 // Al click sul pulsante Play viene mostrata la griglia e resettata se è stata già caricata
 playGame.addEventListener("click", function(){
     document.getElementById("grid-container").innerHTML = "";
@@ -31,12 +34,3 @@ function createNewSquare (){
     currentSquare.classList.add("square");
     return currentSquare;
 }
-
-function createNewSquareMediumDifficult (){
-    const currentSquare = document.createElement("div");
-    currentSquare.classList.add("square-medium");
-    return currentSquare;
-}
-
-// Cambio il livello di difficoltà
-const selectLevel = document.querySelector('.form-select');
