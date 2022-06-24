@@ -10,8 +10,6 @@ div#grid-container{
 
 div.square{
     float: left;
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     cursor: pointer;
 
     display: flex;
@@ -22,18 +20,19 @@ div.square{
     color: white;
 }
 
+#grid-container.easy .square{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
 #grid-container.medium .square{
-    float: left;
     width: calc(100% / 9);
     height: calc(100% / 9);
-    cursor: pointer;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    color: white;
+#grid-container.hard .square{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 div.square{
