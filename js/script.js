@@ -26,6 +26,7 @@ playGame.addEventListener("click", function(){
 
         newSquare.addEventListener("click", function(){
             newSquare.classList.toggle("clicked");
+            console.log("Hai cliccato il numero " + (i + 1));
         });
 
         gridContainer.append(newSquare)
@@ -45,6 +46,7 @@ playGame.addEventListener("click", function(){
     
         newSquare.addEventListener("click", function(){
             newSquare.classList.toggle("clicked");
+            console.log("Hai cliccato il numero " + (i + 1));
         });
     
         gridContainer.append(newSquare)
@@ -55,7 +57,7 @@ playGame.addEventListener("click", function(){
 
         gridContainer.classList.add("hard");
         gridContainer.classList.remove("medium", "easy");
-        
+
         // Creo un ciclo FOR per il numero di quadrati da generare
         for (let i=0; i<49; i++){
         const newSquare = createNewSquare();
@@ -64,6 +66,7 @@ playGame.addEventListener("click", function(){
     
         newSquare.addEventListener("click", function(){
             newSquare.classList.toggle("clicked");
+            console.log("Hai cliccato il numero " + (i + 1));
         });
     
         gridContainer.append(newSquare)
