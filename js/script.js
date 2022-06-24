@@ -6,25 +6,68 @@ console.log(gridContainer);
 const playGame = document.querySelector("header button.btn");
 console.log(playGame);
 
-// Dichiario la variabile del select per il cambio il livello di difficoltà
-const selectLevel = document.querySelector('.form-select');
-
 // Al click sul pulsante Play viene mostrata la griglia e resettata se è stata già caricata
 playGame.addEventListener("click", function(){
-    document.getElementById("grid-container").innerHTML = "";
 
-    // Creo un ciclo FOR per il numero di quadrati da generare
-    for (let i=0; i<100; i++){
-    const newSquare = createNewSquare();
+    // Dichiario la variabile del select per il cambio il livello di difficoltà
+    const selectLevel = document.querySelector('.form-select');
 
-    newSquare.innerHTML = i + 1;
+    if (selectLevel.value == 1){
+        document.getElementById("grid-container").innerHTML = "";
 
-    newSquare.addEventListener("click", function(){
-        newSquare.classList.toggle("clicked");
-    });
+        gridContainer.classList.add("easy");
+        gridContainer.classList.remove("medium", "hard");
 
-    gridContainer.append(newSquare)
-    }
+        // Creo un ciclo FOR per il numero di quadrati da generare
+        for (let i=0; i<100; i++){
+        const newSquare = createNewSquare();
+
+        newSquare.innerHTML = i + 1;
+
+        newSquare.addEventListener("click", function(){
+            newSquare.classList.toggle("clicked");
+        });
+
+        gridContainer.append(newSquare)
+        }}
+
+    if (selectLevel.value == 2){
+        document.getElementById("grid-container").innerHTML = "";
+
+        gridContainer.classList.add("medium");
+        gridContainer.classList.remove("easy", "hard");
+
+        // Creo un ciclo FOR per il numero di quadrati da generare
+        for (let i=0; i<81; i++){
+        const newSquare = createNewSquare();
+    
+        newSquare.innerHTML = i + 1;
+    
+        newSquare.addEventListener("click", function(){
+            newSquare.classList.toggle("clicked");
+        });
+    
+        gridContainer.append(newSquare)
+        }}
+
+    if (selectLevel.value == 3){
+        document.getElementById("grid-container").innerHTML = "";
+
+        gridContainer.classList.add("hard");
+        gridContainer.classList.remove("medium", "easy");
+        
+        // Creo un ciclo FOR per il numero di quadrati da generare
+        for (let i=0; i<49; i++){
+        const newSquare = createNewSquare();
+    
+        newSquare.innerHTML = i + 1;
+    
+        newSquare.addEventListener("click", function(){
+            newSquare.classList.toggle("clicked");
+        });
+    
+        gridContainer.append(newSquare)
+        }}
 })
 
 
